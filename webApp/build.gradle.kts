@@ -24,5 +24,8 @@ kotlin {
 
             implementation(libs.compose.ui)
         }
+        webMain.dependencies {
+            implementation(npm("@js-joda/timezone", "2.25.2"))
+        }
     }
 }
