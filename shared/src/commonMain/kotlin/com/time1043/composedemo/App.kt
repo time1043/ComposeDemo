@@ -11,7 +11,8 @@ import androidx.compose.ui.tooling.preview.Preview
 @Composable
 @Preview
 fun App() {
-    var count by mutableStateOf(1)
+    var count by mutableStateOf(1) // re-initialized every time the UI updates / recomposes
+    println("App recomposed, count is: $count") // always 1
 
     Button(onClick = { count++ }) { Text("$count") }
 }
